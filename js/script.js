@@ -31,21 +31,22 @@ function click_scrollspy(el) {
 	$(el)[0].click();
 }
 // do stuff
-$(document).ready(function(){
-
-	AOS.init();
-	var pageHeight;
-	var footerHeight;
-	var navHeight = 81
-	var winHeight;
-
-	$(window).on('load resize', function() {
-		winHeight = $(this).height();
-		pageHeight = $('#about_us_content').outerHeight();
-		footerHeight = $('.page-footer').outerHeight();
-		// account for navbar height
-	});
 	
+$(document).ready(function(){
+	if (window.innerWidth <= 992) {
+			$('div[data-aos-delay]').attr('data-aos-delay', 0);
+			$("[data-aos-delay]:visible").each(function() {
+				var delay = $(this).attr('data-aos-delay');
+				if (delay > 200 && (isInView(this))) {
+					$(this).attr('data-aos-delay', delay - 1000);
+				}
+			});
+		}
+	$(window).on('resize', function() {
+		// re-init parallax so it repositions itself properly
+		$('.parallax').parallax();
+	})
+	AOS.init();
 	$(window).on('beforeunload', function(){
 		$(window).scrollTop(0); // scroll to top
 	});
@@ -53,6 +54,7 @@ $(document).ready(function(){
 	$('.parallax').parallax();
 	// initialize scrollspy
 	// initialize slider
+
 	$('.slider').slider({
 		interval: 15000
 	});
@@ -78,6 +80,8 @@ $(document).ready(function(){
 		// push below navbar
 		offset: 200
 	});
+	//intialize side nav
+	$('.sidenav').sidenav();
 	// if hash location exists, sroll there
 	var hash_location = false;
 

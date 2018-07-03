@@ -26,17 +26,7 @@
 <body class="grey lighten-1">
 
 	<!-- NAVBAR -->
-	<ul id="search" class="dropdown-content">
-		<li>
-			<form>
-			    <div class="input-field">
-			        <input id="search" type="search" required>
-			        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-			        <i class="material-icons">close</i>
-			    </div>
-			</form>
-		</li>
-	</ul>
+	
 	<div class="navbar-fixed">
 		<nav class="red accent-4 z-depth-5">
 			<div class="nav-wrapper">
@@ -44,7 +34,7 @@
 					<img class="responsive-img" data-aos="fade-up" data-aos-duration=300 data-aos-delay=1400 width="82px" id="logo" src="img/logoredwhite.svg"/>
 				</a>
 				<div class="col l8 xl7">
-					<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<ul id="nav" class="right hide-on-med-and-down">
 						<li class="active"  data-aos="fade-up" data-aos-duration=300 data-aos-delay=1200><a href="index.html">Home</a></li>
 						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=1000><a href="news.html">News archive</a></li>
 						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=800><a href="events.html">Events</a></li>
@@ -52,10 +42,29 @@
 						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=400><a href="about_us.html#contact-us">Contact us</a></li>
 						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=200><a href="what_is_qb.html">What is Quiz Bowl?</a></li>
 					</ul>
+					<ul id="nav" class="right hide-on-large-and-up">
+						<a href="#" data-target="slide-out" class="sidenav-trigger" data-aos="fade-up" data-aos-duration=300 data-aos-delay=200><i class="material-icons">menu</i></a>
+					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
+	<ul id="slide-out" class="sidenav red accent-4">
+		<li><div class="user-view" style="padding-top:100%">
+		    	<div class="background">
+		        	<img src="img/smoothed_logo_grey_transparent.png" class="responsive-img">
+		    	</div>
+		    	<span class="white-text flow-text">Site Navigation</span>
+		    	<div class="divider"></div>
+			</div>	
+		</li>
+    	<li class="active" data-aos="fade-right" data-aos-duration=300 data-aos-delay=100><a class="white-text flow-text" href="index.html">Home</a></li>
+    	<li data-aos="fade-right"><a class="white-text flow-text" href="news.html">News Archive</a></li>
+    	<li data-aos="fade-right"><a class="white-text flow-text" href="events.html">Events</a></li>
+    	<li data-aos="fade-right"><a class="white-text flow-text" href="about_us.html">About us</a></li>
+    	<li data-aos="fade-right"><a class="white-text flow-text" href="about_us.html#contact-us">&emsp; Contact us</a></li>
+    	<li data-aos="fade-right"><a class="white-text flow-text" href="what_is_qb.html">What is Quiz Bowl?</a></li>
+	</ul>
 	<!-- Tartan Parallax -->
 	<div class="parallax-container">
 		<div id="index_content" class="container">
@@ -65,7 +74,7 @@
 				</h1>
 			</div>
 			<div class="row center">
-				<img src="img/smoothed_logo_grey_transparent.png" class="responsive-image top-logo" data-aos="zoom-in" data-aos-duration=1200 data-aos-delay=1600 ease="ease-in-quad">
+				<img src="img/smoothed_logo_grey_transparent.png" class="responsive-img top-logo" data-aos="zoom-in" data-aos-duration=1200 data-aos-delay=1600 ease="ease-in-quad">
 			</div>
 			<div class="row">
 				<div id="welcome" class="section scrollspy valign-wrapper">
@@ -73,19 +82,19 @@
 					<div class="slider sub-slider z-depth-3 container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay=1400 ease="ease-in-quad" data-aos-anchor-placement="#welcome">
 					    <ul class="slides">
 					      	<li class="image-holder">
-						        <img src="img/pub.jpg" class="responsive-image">
+						        <img src="img/pub.jpg" class="responsive-img">
 						        <div class="caption center-align">
 						        	<a class=" slider_left left btn-large btn-flat transparent white-text"><i class="right material-icons really-big icon-button">arrow_back_ios</i></a>
 									<a class="slider_right right btn-large btn-flat transparent white-text"><i class="right material-icons really-big icon-button">arrow_forward_ios</i></a>
 						        	<h3 class="slider-text">About Us</h3>
 						        	<h5 class="white-text flow-text slider-text">
-						          	Carnegie Mellon Quiz Bowl is a team of voracious learners who compete in academic competitions against similar teams accross the country. We also host similar tournaments for High Schoolers to encourage and reward learning beyond the classroom with fast-paced competiton.
+						          	Carnegie Mellon Quiz Bowl is a team of voracious learners who compete in academic competitions against similar teams accross the country. We also host similar tournaments for High Schools.
 						         	</h5>
 						          <a class="waves-effect waves-light btn-large red accent-4 button-3d" href="about_us.html">Read More</a>
 						        </div>
 					      	</li>
 					      	<li class="image-holder">
-						        <img src="img/smoothed_logo_black.png" class="responsive-image img-contain">
+						        <img src="img/smoothed_logo_black.png" class="responsive-img img-contain">
 						        <div class="caption center-align">
 						        	<a class="slider_left left btn-large btn-flat transparent white-text"><i class="right material-icons really-big icon-button">arrow_back_ios</i></a>
 									<a class="slider_right right btn-large btn-flat transparent white-text"><i class="right material-icons really-big icon-button">arrow_forward_ios</i></a>
@@ -96,7 +105,7 @@
 						        </div>
 					      	</li>
 					      	<li class="image-holder">
-					      		<img src="img/cmu_archway.jpg" class="responsive-image">
+					      		<img src="img/cmu_archway.jpg" class="responsive-img">
 					      		<div class="caption center-align">
 					      			<a class="slider_left left btn-large btn-flat transparent white-text"><i class="right material-icons really-big icon-button">arrow_back_ios</i></a>
 									<a class="slider_right right btn-large btn-flat transparent white-text"><i class="right material-icons really-big icon-button">arrow_forward_ios</i></a>
@@ -298,7 +307,6 @@
 							<div class="card-action center">
 								<!-- Uncomment if you have links -->
 								<a href="news.html" class="waves-effect btn waves-light red accent-4 button-3d">Take me there</a>
-								<a href="#!" class="waves-effect btn waves-light red accent-4 button-3d">Read Full Article</a>
 							</div>
 						</div>
 					</div>
@@ -327,12 +335,12 @@
 				</div>
 				</script>				
 			</div>
-	    	<div class="parallax"><img src="img/CMU-Tartan-Digital-1x2.png" alt=""></div>
-	    </div>
+		</div>
+	    <div class="parallax"><img src="img/CMU-Tartan-Digital-1x2.png" alt=""></div>
 	</div>
 
 	<!-- SCROLLSPY -->
-	<div class="col offset-m1 hide-on-small-only m3 l2">
+	<div class="col offset-m1 hide-on-med-and-down m3 l2">
     	<ul class="section table-of-contents fly-spy fadeInLeft">
         	<li><a id="welcome_hash" href="#welcome" class="white-text">Welcome</a></li>
         	<li><a id="recent_news_hash" href="#recent_news" class="white-text">Recent News</a></li>
@@ -374,7 +382,7 @@
 
 	<!-- js loads faster at the end of the body-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
 	 <script src="js/aos.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>	
 </body>

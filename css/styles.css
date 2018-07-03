@@ -8,6 +8,25 @@
 	font-size: 60px !important;
 }
 
+@media (max-width:530px) {
+	.really-big{
+		font-size: 64px !important;
+	}
+	.pretty-big {
+		font-size: 48px !important;
+	}
+}
+@media (max-width:450px) {
+	.icon-button{
+		font-size: 32px !important;
+	}
+}
+
+@media (max-width:360px) {
+	.icon-button{
+		font-size: 18px !important;
+	}
+}
 .title-text {
     transition: text-shadow 0.4s, font-size 0.4s;
 }
