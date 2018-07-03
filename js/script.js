@@ -20,6 +20,14 @@ function isInView(el) {
 }
 
 function click_scrollspy(el) {
+	if (el == "#contact-us_hash") {
+		$('li:contains("About us")').removeClass("active");
+		$('li:contains("Contact us")').addClass("active");
+	}
+	else if (el = "#about_us_content_hash") {
+		$('li:contains("Contact us")').removeClass("active");
+		$('li:contains("About us")').addClass("active");
+	}
 	$(el)[0].click();
 }
 // do stuff
