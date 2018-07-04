@@ -5,10 +5,8 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
 	<link rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> 	
-	<!-- Import animations from https://github.com/daneden/animate.css-->
+	<!-- Import animations -->
 	<link rel="stylesheet" href="css/animate-nonAOS.css">
-	<!-- Import AOS CSS -->
-	<link rel="stylesheet" href="css/aos.css" />
 	<!-- Import custom styles -->
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- import favicons -->
@@ -41,19 +39,19 @@
 		<nav class="red accent-4 z-depth-5">
 			<div class="nav-wrapper">
 				<a href="index.html" class="brand-logo left">
-					<img class="responsive-img" data-aos="fade-up" data-aos-duration=300 data-aos-delay=1400 width="82px" id="logo" src="img/logoredwhite.svg"/>
+					<img class="responsive-img" width="82px" id="logo" src="img/logoredwhite.svg"/>
 				</a>
-				<div class="col l8 xl7">
-					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=1200><a href="index.html">Home</a></li>
-						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=1000><a href="news.html">News archive</a></li>
-						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=800><a href="events.html">Events</a></li>
-						<li class="active"  data-aos="fade-up" data-aos-duration=300 data-aos-delay=600><a onclick="click_scrollspy('#about_us_content_hash')" >About us</a></li>
-						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=400><a onclick="click_scrollspy('#contact-us_hash')"href="about_us.html#contact-us">Contact us</a></li>
-						<li data-aos="fade-up" data-aos-duration=300 data-aos-delay=200><a href="what_is_qb.html">What is Quiz Bowl?</a></li>
+				<div class="col l10">
+					<ul id="nav-mobile" class="right hide-on-small-only">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="news.html">News archive</a></li>
+						<li><a href="events.html">Events</a></li>
+						<li class="active"><a onclick="click_scrollspy('#about_us_content_hash')" >About us</a></li>
+						<li><a onclick="click_scrollspy('#contact-us_hash')"href="about_us.html#contact-us">Contact us</a></li>
+						<li><a href="what_is_qb.html">What is Quiz Bowl?</a></li>
 					</ul>
 				<ul id="nav" class="right hide-on-large-and-up">
-						<a href="#" data-target="slide-out" class="sidenav-trigger" data-aos="fade-up" data-aos-duration=300 data-aos-delay=200><i class="material-icons">menu</i></a>
+						<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 					</ul>
 				</div>
 			</div>
@@ -80,22 +78,22 @@
 		<div class="container">
 			<div id="about_us_content" class="section scrollspy ">
 				<div class="row center">
-					<h1 id="about-us" class="white-text really-big hover-text-3" data-aos="zoom-in" data-aos-duration=900 data-aos-delay=1400 ease="ease-in-quad">
+					<h1 id="about-us" class="white-text really-big hover-text-3"ase="ease-in-quad">
 						About Us
 					</h1>
 				</div>
 				<div class="row center">
-					<img src="img/smoothed_logo_grey_transparent.png" class="responsive-img top-logo" data-aos="zoom-in" data-aos-duration=1200 data-aos-delay=1600 ease="ease-in-quad">
+					<img src="img/smoothed_logo_grey_transparent.png" class="responsive-img top-logo">
 				</div>
 				<div class="row">
 				    <div class="col s12">
-				      <div class="card transparent-card" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay=1400 ease="ease-in-quad" data-aos-anchor-placement="#about_us_content">
+				      <div class="card grey darken-2">
 				        <div class="card-content white-text">
 				          	<p>
-				          		<em>Carnegie Mellon Quiz Bowl</em>, established in 1993, is a team of more than 20 life-long learners who compete in academic competitions against similar teams accross the country. In the past, we competed at Ohio State University, Penn State University, University of Pennsylvania, and Johns Hopkins University, in addition to several national tournaments in Chicago and one in Boston. Specifically, we play quiz bowl, and if you don't know what that is, <b>check out the link below!</b><br><br>
+				          		<em>Carnegie Mellon Quiz Bowl</em>, established in 1993, is a team of more than 20 life-long learners who compete in academic competitions against similar teams across the country. In the past, we competed at Ohio State University, Penn State University, University of Pennsylvania, and Johns Hopkins University, in addition to several national tournaments in Chicago and one in Boston. Specifically, we play quiz bowl, and if you don't know what that is, <b>check out the link below!</b><br><br>
 				          	</p>				     
 				          	<p>
-				          		In additon to competing, we also host two high school quiz bowl tournaments per year: <b>Mellon Bowl</b> at the end of October, and <b>Carnegie Quiz</b> at the end of February or the beginning of March. By doing this, we encourage learning both in and beyond the classroom. We accomplish this by rewarding their knowledge through exhilarating, fast-paced competition and connecting them with bright students from other schools. Feel free to contact us at any time!
+				          		In addition to competing, we also host two high school quiz bowl tournaments per year: <b>Mellon Bowl</b> at the end of October, and <b>Carnegie Quiz</b> at the end of February or the beginning of March. By doing this, we encourage learning both in and beyond the classroom. We accomplish this by rewarding their knowledge through exhilarating, fast-paced competition and connecting them with bright students from other schools. Feel free to contact us at any time!
 				          	</p>
 				        <div class="card-action center">
 				          <a href="what_is_qb.html" class="waves-effect btn waves-light red accent-4 button-3d">What is Quiz Bowl?</a>
@@ -105,22 +103,20 @@
 				    </div>
 				  </div>
 				</div>					
-				<div class="row center-align" data-aos="zoomIn" data-aos-duration="1200" ease="ease-in-quad">
+				<div class="row center-align">
 					<p class="white-text">
 						<i class="scr1 really-big material-icons pulse">expand_moreexpand_more</i><br>
-						<i class="scr2 really-big material-icons pulse">expand_moreexpand_more</i><br>
-						<i class="scr3 really-big material-icons pulse">expand_moreexpand_more</i><br>
 					</p>
 				</div>
 			</div>
 			<div id="officers" class="section scrollspy">
 				<div class="row center">
-					<h1 class="white-text really-big hover-text-3" data-aos="zoom-in" data-aos-duration=900 ease="ease-in-quad">
+					<h1 class="white-text really-big hover-text-3">
 						Current Officers
 					</h1>
 				</div>
 				<div class="row">				<!-- Slider -->
-						<div class="slider sub-slider z-depth-3" data-aos="zoom-in" data-aos-duration="800" ease="ease-in-quad" data-aos-anchor-placement="#officers">
+						<div class="slider sub-slider z-depth-3">
 						    <ul class="slides">
 						    	<li class="image-holder">
 						      		<img src="img/example-prof.png" class="responsive-img img-contain">
@@ -175,18 +171,16 @@
 			</div>
 
 
-			<div class="row center-align" data-aos="zoomIn" data-aos-duration="1200" ease="ease-in-quad">
+			<div class="row center-align">
 				<p class="white-text">
 					<i class="scr1 really-big material-icons pulse">expand_moreexpand_more</i><br>
-					<i class="scr2 really-big material-icons pulse">expand_moreexpand_more</i><br>
-					<i class="scr3 really-big material-icons pulse">expand_moreexpand_more</i><br>
 				</p>
 			</div>
 
 			<div id="contact" class="section scrollspy ">
 				<div class="row">
 					<div class="col s12">
-				    	<div class="card transparent-card" data-aos="zoom-in" data-aos-duration="1200" ease="ease-in-quad">
+				    	<div class="card grey darken-2">
 				    		<div class="card-title center">
 				    			<span class="pretty-big white-text flow-text hover-text-3">
 									Contact Us
@@ -213,7 +207,7 @@
 
 	<!-- SCROLLSPY -->
 	<div class="col offset-m1 hide-on-med-and-down m3 l2">
-    	<ul class="section table-of-contents fly-spy animated slideInLeft">
+    	<ul class="section table-of-contents fly-spy fadeInLeft">
         	<li><a id="about_us_content_hash" href="#about_us_content" class="white-text">About Us</a></li>
         	<li><a id="officers_hash" href="#officers" class="white-text">Meet the Officers</a></li>
         	<li><a id="contact-us_hash" href="#contact" class="white-text">Contact Us</a></li>
@@ -255,7 +249,7 @@
 	<!-- js loads faster at the end of the body-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/materialize.js"></script>
-	 <script src="js/aos.js"></script>
+	<script src="js/aos.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>	
 </body>
 </html>

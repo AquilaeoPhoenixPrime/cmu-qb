@@ -1,5 +1,8 @@
 /* all shadow effects taken from here https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
 
+.row {
+	opacity: 0;
+}
 .really-big {
 	font-size: 88px !important;
 }
@@ -172,8 +175,8 @@ input[type="search"] {
 
 .fly-spy{
 	z-index: 100;
-	animation-duration: .8s;
-	animation-delay: 2s;
+	animation-duration: .6s;
+	animation-delay: 0s;
 }
 
 .card em {

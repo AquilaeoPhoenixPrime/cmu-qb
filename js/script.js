@@ -1,19 +1,10 @@
-/*!
- * jQuery Smooth Scroll - v2.2.0 - 2017-05-05
- * https://github.com/kswedberg/jquery-smooth-scroll
- * Copyright (c) 2017 Karl Swedberg
- * Licensed MIT
- */
-
-
 // is el in view
 function isInView(el) {
     var rect = el.getBoundingClientRect();
     var elemTop = rect.top;
-    var elemBottom = rect.bottom;
 
     // Only completely visible elements return true:
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    var isVisible = (elemTop <= window.innerHeight);
     // Partially visible elements return true:
     //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
     return isVisible;
@@ -30,25 +21,25 @@ function click_scrollspy(el) {
 	}
 	$(el)[0].click();
 }
+
+function isInNavbar(el) {
+	return $.contains($('.nav-wrapper')[0], el);
+}
 // do stuff
 	
 $(document).ready(function(){
-	if (window.innerWidth <= 992) {
-			$('div[data-aos-delay]').attr('data-aos-delay', 0);
-			$("[data-aos-delay]:visible").each(function() {
-				var delay = $(this).attr('data-aos-delay');
-				if (delay > 200 && (isInView(this))) {
-					$(this).attr('data-aos-delay', delay - 1000);
-				}
-			});
-		}
 	$(window).on('resize', function() {
-		// re-init parallax so it repositions itself properly
+		// re-init parallax so it repositions itself properly	
 		$('.parallax').parallax();
 	})
 	AOS.init();
-	$(window).on('beforeunload', function(){
-		$(window).scrollTop(0); // scroll to top
+	$(window).on('load', function() {
+		$('.row').each(function() {
+			$(this).css("opacity", 1);
+			if (isInView(this) && !isInNavbar(this)) {
+				$(this).addClass('fadeInDown');
+			}
+		})
 	});
 	// initialize parralax effect
 	$('.parallax').parallax();
@@ -69,13 +60,7 @@ $(document).ready(function(){
 	$('.scrollspy').scrollSpy({
 		scrollOffset: 200
 	});
-	
-	$('.pulse').on('scroll', function() {
-		// make arrows go away
-		if(isInView($(this))) {
-			$(this).removeClass()
-		}
-	});
+
 	$('.table-of-contents').pushpin({
 		// push below navbar
 		offset: 200
@@ -100,6 +85,6 @@ $(document).ready(function(){
 			}
 			// click scrollspy
 			click_scrollspy(hash_location);
-		}, 100);
+		}, 1);
 	}
 });
