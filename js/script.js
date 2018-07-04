@@ -32,7 +32,6 @@ $(document).ready(function(){
 		// re-init parallax so it repositions itself properly	
 		$('.parallax').parallax();
 	})
-	AOS.init();
 	$(window).on('load', function() {
 		$('.row').each(function() {
 			$(this).css("opacity", 1);
@@ -85,6 +84,6 @@ $(document).ready(function(){
 			}
 			// click scrollspy
 			click_scrollspy(hash_location);
-		}, 1);
+		}, 100);
 	}
 });
