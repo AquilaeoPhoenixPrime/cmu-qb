@@ -26,7 +26,6 @@ function isInNavbar(el) {
 	return $.contains($('.nav-wrapper')[0], el);
 }
 // do stuff
-	
 $(document).ready(function(){
 	$(window).on('resize', function() {
 		// re-init parallax so it repositions itself properly	
@@ -86,4 +85,5 @@ $(document).ready(function(){
 			click_scrollspy(hash_location);
 		}, 100);
 	}
+	$('input#firstname, input#lastname, input#subject, input#title').characterCounter();
 });
