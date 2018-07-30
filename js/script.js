@@ -15,7 +15,7 @@ function click_scrollspy(el) {
 		$('li:contains("About us")').removeClass("active");
 		$('li:contains("Contact us")').addClass("active");
 	}
-	else if (el = "#about_us_content_hash") {
+	else if (el == "#about_us_content_hash") {
 		$('li:contains("Contact us")').removeClass("active");
 		$('li:contains("About us")').addClass("active");
 	}
@@ -25,9 +25,16 @@ function click_scrollspy(el) {
 function isInNavbar(el) {
 	return $.contains($('.nav-wrapper')[0], el);
 }
+
+function toggleHidden(el) {
+	$(el).fadeToggle();
+	$(el).each(function(index) {
+		$(this).css('height', $(window).height());
+	})
+}
 // do stuff
-	
 $(document).ready(function(){
+
 	$(window).on('resize', function() {
 		// re-init parallax so it repositions itself properly	
 		$('.parallax').parallax();
@@ -46,7 +53,8 @@ $(document).ready(function(){
 	// initialize slider
 
 	$('.slider').slider({
-		interval: 15000
+		interval: 15000,
+		height: 500
 	});
 	// use slider buttons
 	$('.slider_left').click(function(){
@@ -86,4 +94,5 @@ $(document).ready(function(){
 			click_scrollspy(hash_location);
 		}, 100);
 	}
+	$('input#firstname, input#lastname, input#subject, input#title').characterCounter();
 });
